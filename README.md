@@ -13,6 +13,6 @@ El programa permite un recorrido del laberinto de manera manual o automática me
 El recorrido manual permite que el usuario recorra el laberinto usando las teclas 'W', 'A', 'S' y 'D'  para desplazarse.
 Al finalizar el recorrido, muestra en cuantos pasos fue resuelto.
 
-### Automatico
+### Automático
 El recorrido automático analiza todos los posibles caminos a través de recursividad y, al final, muestra el laberinto resuelto 
 con el camino que requiera la menor cantidad de pasos y la cantidad de estos.
