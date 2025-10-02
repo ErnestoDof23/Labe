@@ -1,8 +1,7 @@
-package mx.edu.utez;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Main {
+public class Laberinto {
     private static final char PARED = '█';
     private static final char CAMINO = ' ';
     private static final char JUGADOR = 'P';
@@ -12,15 +11,52 @@ public class Main {
     private static final int FILAS = 15;
     private static final int COLUMNAS = 25;
 
-    private char[][] laberinto;
     private int jugadorFila;
     private int jugadorColumna;
     private int salidaFila;
     private int salidaColumna;
     private int pasos;
-    private boolean juegoTerminado;
 
-    public Main() {
+    private boolean juegoTerminado;
+    private char[][] laberinto;
+
+    public static int getFilas() {
+        return FILAS;
+    }
+
+    public static int getColumnas() {
+        return COLUMNAS;
+    }
+
+    public static char getPARED() {
+        return PARED;
+    }
+
+    public static char getCAMINO() {
+        return CAMINO;
+    }
+
+    public static char getJUGADOR() {
+        return JUGADOR;
+    }
+
+    public static char getVISITADO() {
+        return VISITADO;
+    }
+
+    public int getSalidaFila() {
+        return salidaFila;
+    }
+
+    public int getSalidaColumna() {
+        return salidaColumna;
+    }
+
+    public char[][] getLaberinto() {
+        return laberinto;
+    }
+
+    public void Main() {
         laberinto = new char[FILAS][COLUMNAS];
         pasos = 0;
         juegoTerminado = false;
@@ -94,7 +130,6 @@ public class Main {
     public void mostrarLaberinto() {
         System.out.println("\n=== LABERINTO ===");
         System.out.println("P: Jugador | S: Salida | █: Pared | .: Visitado");
-        System.out.println("Pasos: " + pasos + "\n");
 
         for (int i = 0; i < FILAS; i++) {
             for (int j = 0; j < COLUMNAS; j++) {
@@ -206,8 +241,4 @@ public class Main {
         return jugadorColumna;
     }
 
-    public static void main(String[] args) {
-        Main juego = new Main();
-        juego.jugar();
-    }
 }
